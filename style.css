@@ -12,3 +12,81 @@
   --bs-body-color: hsl(var(--clr-very-dark-blue));
   --bs-body-bg: hsl(var(--clr-off-white));
 }
+
+/* HEADER */
+
+header {
+  /* Define fluid spacing that grows from 28px at 375w to 89px at 1440w */
+  --space-top: clamp(1.75rem, 0.4076rem + 5.7277vw, 5.5625rem);
+}
+
+/* NAVBAR */
+
+.navbar {
+  --bs-navbar-padding-x: 16px;
+  --bs-navbar-padding-y: 28px;
+  --bs-navbar-color: hsl(var(--clr-very-dark-blue));
+  --bs-navbar-hover-color: hsl(var(--clr-soft-red));
+  --bs-navbar-brand-padding-y: 0;
+  --bs-navbar-nav-link-padding-x: 0;
+  --bs-navbar-toggler-padding-x: 4px;
+  --bs-navbar-toggler-font-size: 1rem;
+  --bs-navbar-toggler-border-color: transparent;
+  padding-block-start: var(--space-top);
+}
+
+.navbar .container-fluid {
+  max-width: 1111px;
+  /* Remove excess inline padding here since it's already set on the parent */
+  --bs-gutter-x: 0;
+}
+
+.navbar-brand {
+  /* Grow from 46px wide at 375w to 65px wide at 1143w */
+  width: clamp(2.875rem, 2.2952rem + 2.474vw, 4.0625rem);
+}
+
+.navbar-brand img {
+  width: 100%;
+  height: auto;
+}
+
+.navbar-toggler {
+  align-self: stretch;
+}
+
+.navbar-nav {
+  column-gap: 38px;
+  row-gap: 26px;
+  --bs-nav-link-padding-y: 0;
+  --bs-nav-link-font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    --bs-nav-link-font-size: 16px;
+  }
+}
+
+/* MOBILE NAV */
+
+.offcanvas {
+  --bs-offcanvas-width: 256px;
+}
+
+.offcanvas-header {
+  padding-inline: 15px;
+  padding-block-start: calc(var(--space-top) - 5px);
+}
+
+.offcanvas-header .btn {
+  padding: 4px;
+  --bs-btn-bg: transparent;
+  --bs-btn-color: hsl(var(--clr-very-dark-blue));
+  --bs-btn-border-color: transparent;
+}
+
+.offcanvas-body {
+  padding-inline: 24px;
+  padding-block-start: 71px;
+}
