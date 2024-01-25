@@ -1,4 +1,14 @@
-body {
-  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-  font-weight: normal;
+:root {
+  /* Colors */
+  --clr-soft-orange: 35 77% 62%;
+  --clr-soft-red: 5 85% 63%;
+  --clr-off-white: 36 100% 99%;
+  --clr-grayish-blue: 233 8% 79%;
+  --clr-dark-grayish-blue: 236 13% 42%;
+  --clr-very-dark-blue: 240 100% 5%;
+
+  /* Bootstrap variables */
+  --bs-body-font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  --bs-body-color: hsl(var(--clr-very-dark-blue));
+  --bs-body-bg: hsl(var(--clr-off-white));
 }
