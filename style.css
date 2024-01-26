@@ -13,6 +13,12 @@
   --bs-body-bg: hsl(var(--clr-off-white));
 }
 
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 /* HEADER */
 
 header {
@@ -44,11 +50,6 @@ header {
 .navbar-brand {
   /* Grow from 46px wide at 375w to 65px wide at 1143w */
   width: clamp(2.875rem, 2.2952rem + 2.474vw, 4.0625rem);
-}
-
-.navbar-brand img {
-  width: 100%;
-  height: auto;
 }
 
 .navbar-toggler {
