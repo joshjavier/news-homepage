@@ -225,7 +225,7 @@ main {
 }
 
 /* Switch above-the-fold section to 2-column layout on the large breakpoint */
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   .s-atl {
     justify-content: space-between;
   }
