@@ -9,6 +9,7 @@
 
   /* Bootstrap variables */
   --bs-body-font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  --bs-body-font-size: 15px;
   --bs-body-color: hsl(var(--clr-very-dark-blue));
   --bs-body-bg: hsl(var(--clr-off-white));
 }
@@ -90,4 +91,144 @@ header {
 .offcanvas-body {
   padding-inline: 24px;
   padding-block-start: 71px;
+}
+
+/* MAIN */
+
+main {
+  padding-inline: 16px;
+}
+
+.s-atl {
+  row-gap: 64px;
+}
+
+/* FEATURED SECTION */
+
+.s-featured .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.s-featured .text {
+  margin-top: 24px;
+}
+
+.s-featured h2 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.s-featured p {
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .s-featured .banner {
+    height: 300px;
+  }
+
+  .s-featured .text {
+    column-gap: 80px;
+  }
+
+  .s-featured h2 {
+    font-size: 56px;
+    min-width: 300px;
+    margin-bottom: 0;
+  }
+
+  .s-featured p {
+    line-height: 1.6;
+  }
+}
+
+.btn-primary {
+  padding-inline: 31px 36px;
+  padding-block: 16px 15px;
+  --bs-btn-font-size: 14px;
+  --bs-btn-font-weight: 700;
+  --bs-btn-line-height: 1;
+  letter-spacing: 4.34px;
+  text-transform: uppercase;
+  --bs-btn-bg: hsl(var(--clr-soft-red));
+  --bs-btn-hover-bg: hsl(var(--clr-very-dark-blue));
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-border-radius: 0;
+}
+
+/* NEW ARTICLES SECTION */
+
+.s-new {
+  background-color: hsl(var(--clr-very-dark-blue));
+  color: hsl(var(--clr-off-white));
+  padding: 21px 21px 24px;
+}
+
+.s-new h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: normal;
+  color: hsl(var(--clr-soft-orange));
+  margin-bottom: 31px;
+}
+
+.s-new article + article::before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: hsl(var(--clr-off-white));
+  opacity: 0.5;
+  margin-block: 30px;
+}
+
+.s-new article h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.s-new article a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.s-new article a:hover {
+  color: hsl(var(--clr-soft-orange));
+}
+
+.s-new p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .s-new {
+    padding: 28px 25px 32px 24px;
+  }
+
+  .s-new h2 {
+    font-size: 40px;
+    margin-bottom: 29px;
+  }
+}
+
+/* Switch above-the-fold section to 2-column layout on the large breakpoint */
+@media (min-width: 960px) {
+  .s-atl {
+    justify-content: space-between;
+  }
+
+  .s-featured {
+    width: 65.7%;
+  }
+
+  .s-new {
+    width: 31.5%;
+  }
 }
