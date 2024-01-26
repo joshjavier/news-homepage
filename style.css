@@ -14,10 +14,21 @@
   --bs-body-bg: hsl(var(--clr-off-white));
 }
 
-
 img {
   width: 100%;
   height: auto;
+}
+
+.container {
+  /* Remove excess inline padding here since we'll set it on the parent */
+  --bs-gutter-x: 0;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    /* Set the max-width for all containers starting from the lg breakpoint */
+    max-width: 1110px;
+  }
 }
 
 /* HEADER */
@@ -39,13 +50,8 @@ header {
   --bs-navbar-toggler-padding-x: 4px;
   --bs-navbar-toggler-font-size: 1rem;
   --bs-navbar-toggler-border-color: transparent;
-  padding-block-start: var(--space-top);
-}
-
-.navbar .container-fluid {
-  max-width: 1111px;
-  /* Remove excess inline padding here since it's already set on the parent */
-  --bs-gutter-x: 0;
+  padding-top: var(--space-top);
+  padding-bottom: 32px;
 }
 
 .navbar-brand {
