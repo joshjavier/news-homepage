@@ -36,6 +36,8 @@ img {
 header {
   /* Define fluid spacing that grows from 28px at 375w to 89px at 1440w */
   --space-top: clamp(1.75rem, 0.4076rem + 5.7277vw, 5.5625rem);
+  /* and another that grows from 32px at 375w to 55px at 1440w */
+  --space-bottom: clamp(2rem, 1.4938rem + 2.1596vw, 3.4375rem);
 }
 
 /* NAVBAR */
@@ -51,7 +53,7 @@ header {
   --bs-navbar-toggler-font-size: 1rem;
   --bs-navbar-toggler-border-color: transparent;
   padding-top: var(--space-top);
-  padding-bottom: 32px;
+  padding-bottom: var(--space-bottom);
 }
 
 .navbar-brand {
@@ -141,6 +143,7 @@ main {
 
   .s-featured .text {
     column-gap: 80px;
+    margin-top: 31px;
   }
 
   .s-featured h2 {
@@ -151,6 +154,7 @@ main {
 
   .s-featured p {
     line-height: 1.6;
+    margin-bottom: 36px;
   }
 }
 
@@ -211,6 +215,7 @@ main {
 
 .s-new p {
   margin-bottom: 0;
+  line-height: 1.7;
 }
 
 @media (min-width: 768px) {
